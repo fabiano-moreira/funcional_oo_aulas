@@ -1,4 +1,4 @@
 # Teste
 
-Este é o segungo arquivo de test do repositório.
+Este é o segundo arquivo de test do repositório.
 
