@@ -1,0 +1,94 @@
+Este é o me primeiro documento no RNotebook. Uma excelente ferramenta para relatórios de Data Sscience.
+Introdução
+
+Vamos criar um vetor numérico, um vetor de inteiros, um vetor de strint (texto).
+
+
+
+```{r}
+plot(cars)
+
+```
+
+```{r}
+#Vetor numérico assume casas decimais
+print(x <- c(5, 3.4, 6.2, 7))
+
+class(x)
+
+
+#Vetor de inteiros 
+
+idades <- c(29L, 33L, 54L, 44L)
+idades
+class(idades)
+nomes <- c("Fabiano", "Larissa", "Ana", "Adelvan")
+nomes
+
+```
+
+
+
+
+
+Vamos criar um banco de dados data.frame. Para isso, vamos criar um vetor de nomes, outro de idades e outro nome de times de futebol.
+
+```{r}
+nomes <- c("Nelson", "Neylson", "Bia", "Larissa")
+idades <- c(37L, 31L, 22L, 24L)
+times <- c("Cruzeiro", "América", "Atlético", NA)
+
+dados <- data.frame(nomes, idades, times,
+                    stringsAsFactors = F)
+dados
+
+```
+
+
+
+
+Agora iremos investigar o nosso banco de dados.
+
+```{r}
+
+#Investigando as dimensões do banco
+dim(dados) #Dimensões do banco
+names(dados) #Nomes das variáveis
+str(dados) #Estrutura do banco de dados
+
+
+```
+
+
+Vou transformar a variável times em factor.
+
+```{r}
+
+dados$times <- as.factor(dados$times)
+str(dados)
+class(dados$times)
+
+```
+
+
+#Trabalhando com o Enade
+
+Estamos estudando o banco do Enade. O Enade é....
+
+Para fins práticos, vamos trabalhar com uma amostra aleatória, previamente preparada para esta aula. Esta amostra está alocada no Github e nós podemos carregá-la.
+
+```{r}
+install.packages("readr")
+
+library(readr)
+
+enade14 <- read_csv2("https://raw.githubusercontent.com/neylsoncrepalde/introducao_ao_r/master/dados/enade_2014_amostra.csv")
+
+dim(enade14)
+names(enade14)
+
+hist(enade14$nt_ger, col = "green", main = "Histograma da Nota Geral do Enade")
+
+
+```
+
