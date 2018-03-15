@@ -1,3 +1,9 @@
+---
+title: "Programação Funcional e OO"
+subtitle: "Aula 1"
+date: "12 de março de 2018"
+output: html_notebook
+---
 Este é o me primeiro documento no RNotebook. Uma excelente ferramenta para relatórios de Data Sscience.
 Introdução
 
